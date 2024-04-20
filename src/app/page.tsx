@@ -3,6 +3,10 @@ import { getServerSession } from "next-auth";
 import { options } from "./api/auth/[...nextauth]/option";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import LogoI from "./(components)/(logos)/Instagram";
+import LogoF from "./(components)/(logos)/Facebook";
+import LogoG from "./(components)/(logos)/Github";
+import LogoL from "./(components)/(logos)/Linkedin";
 
 export default async function Home() {
   const session = await getServerSession(options);
@@ -33,7 +37,12 @@ export default async function Home() {
               <Link href="/api/auth/signin">Log in</Link>
             </button>
             <p>any bug spotted?contact below!</p>
-            <div></div>
+            <div className="flex gap-2 justify-center items-center ">
+              <LogoI />
+              <LogoF />
+              <LogoG />
+              <LogoL />
+            </div>
           </section>
         </div>
       )}

@@ -17,7 +17,7 @@ function Header() {
     { day: "Sat", date: sundayDate.getDate() + 6 },
   ];
   return (
-    <div className="bg-[#F4D8F9]">
+    <div className="bg-[#f8cdb3]">
       <h1 className="flex justify-center py-1 pt-8 text-lg font-sans font-semibold">
         Today
       </h1>
@@ -26,12 +26,12 @@ function Header() {
           {weekDays.map((item, index) => (
             <div
               key={index}
-              className={`w-1/7 p-1  ${
-                currentDayIndex === index ? "bg-[#C67ED2]" : "bg-[#E7C3ED]"
+              className={`w-1/7 p-1 border border-[#fff8f4] ${
+                currentDayIndex === index ? "bg-[#FF8F49]" : "bg-[#fcb589]"
               } rounded-lg`}
             >
               <p className="flex justify-center">{item.day}</p>
-              <div className=" p-2 rounded-full bg-[#F5F5F5]">
+              <div className=" p-2 rounded-full bg-[#fff8f4]">
                 <p>{item.date}</p>
               </div>
             </div>
