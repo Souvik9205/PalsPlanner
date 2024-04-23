@@ -24,7 +24,7 @@ const page = async () => {
         <Share />
         <LogOut />
       </div>
-      <div className="fixed bottom-0 w-full">
+      <div className="fixed md:relative bottom-0 w-full">
         <Footer />
       </div>
     </div>
