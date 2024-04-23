@@ -23,7 +23,7 @@ export default async function Home() {
         </section>
         <section className="flex flex-col gap-3 justify-center items-center">
           <button className="bg-rose-100 hover:bg-gray-100 text-gray-800 font-bold py-3 px-10 rounded shadow-md shadow-slate-500">
-            <Link href="/api/auth/signin">Log in</Link>
+            <Link href="/home">Log in</Link>
           </button>
           <p>any bug spotted?contact below!</p>
           <div className="flex gap-2 justify-center items-center ">
