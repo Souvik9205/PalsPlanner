@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { FaCalendar, FaTasks, FaUser } from "react-icons/fa";
 
-function Footer() {
+async function Footer() {
   return (
     <div className=" p-5 shadow-black shadow-[0_15px_70px_-15px_rgba(0,0,0,0.3)]  rounded-t-2xl bg-white">
       <div className="flex justify-around">
@@ -12,7 +12,7 @@ function Footer() {
         <Link href="/home">
           <FaTasks size={20} />
         </Link>
-        <Link href="#">
+        <Link href="/dashboard">
           <FaUser size={20} />
         </Link>
       </div>
