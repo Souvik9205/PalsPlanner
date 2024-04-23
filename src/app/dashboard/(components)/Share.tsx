@@ -8,6 +8,13 @@ import {
   TelegramShareButton,
   WhatsappShareButton,
 } from "react-share";
+import {
+  EmailIcon,
+  FacebookIcon,
+  LinkedinIcon,
+  TelegramIcon,
+  WhatsappIcon,
+} from "react-share";
 
 const Share = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,8 +37,22 @@ const Share = () => {
         />
       </div>
       {isOpen && (
-        <div className="mt-2">
-          <FacebookShareButton url="">facebook</FacebookShareButton>
+        <div className="mt-2 w-full flex justify-around p-2">
+          <FacebookShareButton url="https://pals-planner.vercel.app/">
+            <FacebookIcon size={40} />
+          </FacebookShareButton>
+          <EmailShareButton url="https://pals-planner.vercel.app/">
+            <EmailIcon size={40} />
+          </EmailShareButton>
+          <LinkedinShareButton url="https://pals-planner.vercel.app/">
+            <LinkedinIcon size={40} />
+          </LinkedinShareButton>
+          <TelegramShareButton url="https://pals-planner.vercel.app/">
+            <TelegramIcon size={40} />
+          </TelegramShareButton>
+          <WhatsappShareButton url="https://pals-planner.vercel.app/">
+            <WhatsappIcon size={40} />
+          </WhatsappShareButton>
         </div>
       )}
     </div>

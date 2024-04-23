@@ -4,6 +4,7 @@ import Profile from "./(components)/Profile";
 import Countup from "./(components)/Countup";
 import About from "./(components)/About";
 import Share from "./(components)/Share";
+import LogOut from "./(components)/LogOut";
 const page = async () => {
   const userEmail = "souvik2364@gmail.com";
   return (
@@ -21,8 +22,11 @@ const page = async () => {
         <Countup />
         <About />
         <Share />
+        <LogOut />
       </div>
-      <Footer />
+      <div className="fixed bottom-0 w-full">
+        <Footer />
+      </div>
     </div>
   );
 };
