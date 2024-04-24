@@ -1,12 +1,18 @@
 import React from "react";
 import Link from "next/link";
-import { redirect } from "next/navigation";
+import { auth } from "@clerk/nextjs/server";
 import LogoI from "./(components)/(logos)/Instagram";
 import LogoF from "./(components)/(logos)/Facebook";
 import LogoG from "./(components)/(logos)/Github";
 import LogoL from "./(components)/(logos)/Linkedin";
+import { redirect } from "next/navigation";
 
 export default async function Home() {
+  const { userId } = auth();
+
+  if (userId) {
+    redirect("/home");
+  }
   return (
     <div>
       <div
@@ -23,7 +29,7 @@ export default async function Home() {
         </section>
         <section className="flex flex-col gap-3 justify-center items-center">
           <button className="bg-rose-100 hover:bg-gray-100 text-gray-800 font-bold py-3 px-10 rounded shadow-md shadow-slate-500">
-            <Link href="/home">Log in</Link>
+            <Link href="/sign-up">Log in</Link>
           </button>
           <p>any bug spotted?contact below!</p>
           <div className="flex gap-2 justify-center items-center ">

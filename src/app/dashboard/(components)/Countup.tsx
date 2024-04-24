@@ -2,9 +2,13 @@
 import React from "react";
 import CountUp from "react-countup";
 
-function Countup() {
-  const TaskCreated = 50;
-  const DoneTask = 30;
+interface Props {
+  data: [number, number];
+}
+
+const Countup: React.FC<Props> = ({ data }) => {
+  const [TaskCreated, DoneTask] = data;
+
   return (
     <div className="flex w-full justify-center items-center my-5">
       <div className="w-1/2">
@@ -41,6 +45,6 @@ function Countup() {
       </div>
     </div>
   );
-}
+};
 
 export default Countup;

@@ -1,12 +1,12 @@
 import Footer from "../(components)/Footer";
 import Avatar from "./(components)/Avatar";
 import Profile from "./(components)/Profile";
-import Countup from "./(components)/Countup";
+
 import About from "./(components)/About";
 import Share from "./(components)/Share";
 import LogOut from "./(components)/LogOut";
+import DB from "./(backend)/DB";
 const page = async () => {
-  const userEmail = "souvik2364@gmail.com";
   return (
     <div
       className="flex flex-col h-screen overflow-hidden bg-[#dbf9c6]"
@@ -18,8 +18,8 @@ const page = async () => {
     >
       <div className="flex-1 overflow-y-auto">
         <Avatar />
-        <Profile data={userEmail} />
-        <Countup />
+        <Profile />
+        <DB />
         <About />
         <Share />
         <LogOut />

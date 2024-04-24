@@ -5,9 +5,16 @@ mongoose.Promise = global.Promise;
 
 const userSchema = new Schema(
   {
+    user: String,
     email: String,
-    password: String,
-    auth: String,
+    TotalTask: {
+      type: Number,
+      default: 0,
+    },
+    DoneTask: {
+      type: Number,
+      default: 0,
+    },
     tasks: {
       type: Array,
       default: [],
